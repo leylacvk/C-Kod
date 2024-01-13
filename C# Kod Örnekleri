@@ -1,0 +1,215 @@
+static void Main(string[] args)
+{
+    /*
+    //Girilen sayının 4 ve 7 ye tam bölünüp bölünmediğini bulan Console örneği
+    Console.Write("Sayı : ");
+    int x = int.Parse(Console.ReadLine());
+    if (x % 4 == 0 && x % 7 == 0) { Console.WriteLine("Sayı 4 ve 7'ye tam bölünür."); }
+    else { Console.WriteLine("Sayı 4 ve 7'ye tam bölünmez."); }
+    */
+    /*
+    //Girilen sayının 0-100 arasında olup olmadığını kontrol eden Console örneği.
+    Console.Write("Sayı : ");
+    int x = int.Parse(Console.ReadLine());
+    if(x >= 0 && x <=100) { Console.WriteLine(x + ", 0 - 100 arasındadır."); }
+    else { Console.WriteLine(x + ", 0 - 100 arasında değildir."); }
+    */
+    /*
+    //Kullanıcının girdiği metni kullanıcının girdiği sayıda ekranda yazdıran Console örneği.
+    Console.Write("Metin : ");
+    string metin = Convert.ToString(Console.ReadLine());
+    Console.Write("Kaç Kez Ekranda Yazsın ? : ");
+    int x = int.Parse(Console.ReadLine());
+    for(int i = 0; i <=x; i++)
+    {
+        Console.WriteLine((i + 1) + ". " + metin);
+    }
+    */
+    /*
+    //Kullanıcının girdiği n sayıdan 50 den küçük olanların adetini bulan ve gösteren Console Örneği:
+    int adet = 0;
+    Console.Write("Kaç Adet Sayı : ");
+    int n = int.Parse(Console.ReadLine());
+    for(int i = 0; i < n; i++)
+    {
+        Console.Write((i + 1) + ". Sayı : ");
+        int sayi = int.Parse(Console.ReadLine());
+        if(sayi >= 50)
+        {
+            adet++;
+        }
+    }
+    Console.WriteLine("50'den Büyük Olan Sayılar : " + adet);
+    */
+    /*
+    //Bilgisayar tarafından rastgele tutulan n sayıdan 50′ den yukarı olanların ortalamasını bulan Console örneği:
+    int toplam = 0, sayac = 0;
+    Console.Write("Kaç Sayı : ");
+    int n = int.Parse(Console.ReadLine());
+    Random rnd = new Random();
+    for (int i = 1; i <= n; i++)
+    {
+        int sayi = rnd.Next(1, 100);
+        Console.WriteLine(sayi);
+        if (sayi > 50)
+        {
+            toplam += sayi; sayac++;
+        }
+    }
+    Console.WriteLine("50 den büyük sayıların ortalaması :{0} ", (toplam / sayac));
+    */
+    /*
+    //Bilgisayardan tutulan n elemanlı dizinin en büyük ve en küçük değerini bulan program
+    Console.Write("Kaç Sayı : ");
+    int n = int.Parse(Console.ReadLine());
+    int[] dizi = new int[n];
+    Random rnd = new Random();
+    for(int i = 0; i < n; i++)
+    {
+        dizi[i] = rnd.Next(1,100);
+        Console.WriteLine(dizi[i]);
+    }
+    int eb = dizi[0];
+    int ek = dizi[0];
+    for(int i = 1; i < n;i++)
+    {
+        if (dizi[i] > eb)
+        {
+            eb = dizi[i];
+        }
+        else if (dizi[i] < ek)
+        {
+            ek = dizi[i];
+        }
+    }
+    Console.WriteLine("En Büyük Sayı : " + eb);
+    Console.WriteLine("En Küçük Sayı : " + ek);
+    Console.ReadKey();
+    */
+    /*
+    //Kullanıcıdan başlangıç,bitiş ve artım değeri istenerek,
+    //başlangıç ve bitiş sayıları arasındaki sayıları ekrana yazan program;
+    Console.Write("Başlangıç : ");
+    int x = int.Parse(Console.ReadLine());
+    Console.Write("Bitiş : ");
+    int y = int.Parse(Console.ReadLine());
+    Console.Write("Artış : ");
+    int a = int.Parse(Console.ReadLine());
+    for(int i = x; i <= y; i+= a)
+    {
+        Console.WriteLine(i);
+    }
+    */
+    /*
+    // Kullanıcıdan alınan 10 elemanlı dizinin elemanlarını %20 artırıp ekrana yazan program;
+    int[] dizi = new int[3];
+    for(int i = 0;i < 3; i++)
+    {
+        Console.Write((i + 1) + ". Sayı : ");
+        dizi[i] = int.Parse(Console.ReadLine());
+    }
+    for(int i = 0; i < 3; i++)
+    {
+        dizi[i] = dizi[i] * 20 / 100;
+        Console.WriteLine(dizi[i]);
+    }
+    Console.ReadKey();
+    */
+    /*
+    // Kullanıcının eleman sayısını belirlediği ve elemanları
+    // kullanıcıdan alınan dizinin en büyük ve en küçük indisini bulan program;
+    Console.Write("Kaç Eleman : ");
+    int n = int.Parse(Console.ReadLine());
+    int[] dizi = new int[n];
+    for(int i = 0; i < n; i++)
+    {
+        Console.Write(i + ". Sayı : ");
+        dizi[i] = int.Parse(Console.ReadLine());
+    }
+    int ebi = 0;
+    int eki = 0;
+    int eb = dizi[0];
+    int ek = dizi[0];
+    for(int i = 0; i < n; i++)
+    {
+        if (dizi[i] > eb)
+        {
+            eb = dizi[i];
+            ebi = i;
+        }
+        else if (dizi[i] < ek)
+        {
+            ek = dizi[i];
+            eki = i;
+        }
+    }
+    Console.WriteLine("En Büyük İndis : " + ebi);
+    Console.WriteLine("En Küçük İndis : " + eki);
+    */
+    /*
+    //Klaveyeden girilen sayının asal olup olmadığını bulan program;
+    int kontrol = 0;
+    Console.Write("Sayı : ");
+    int x = int.Parse(Console.ReadLine());
+    for(int i = 2; i < x; i++)
+    {
+        if(x % i == 0)
+        {
+            kontrol++;
+        }
+    }
+    if (kontrol != 0)
+    { 
+        Console.WriteLine(x + " Asal Değildir !");
+    }
+    else
+    {
+        Console.WriteLine(x + " Asaldır.");
+    }
+    */
+    /*
+    //Klavyeden girilen n adet sayıdan 3 ve 5'e tam bölünenleri ekrana yazdıran kodlar;
+    Console.Write("Kaç Adet Sayı : ");
+    int n = int.Parse(Console.ReadLine());
+    double toplam = 0;
+    int sayac = 0;
+    for (int i = 0; i < n; i++)
+    {
+        Console.Write((i + 1) + ". Sayı : ");
+        double sayi = int.Parse(Console.ReadLine());
+        if (sayi % 3 == 0 && sayi % 5 == 0)
+        {
+            toplam = toplam + sayi;
+            sayac++;
+        }
+    }
+    Console.WriteLine("3 ve 5'e tam bölünen sayıların toplamı: " + toplam + ", sayısı: " + sayac);
+    */
+    /*
+    // 1'den girilen sayıya kadar olan sayıların toplamını yazan program;
+    Console.Write("Hangi Sayıya Kadar Toplansın : ");
+    int x = int.Parse(Console.ReadLine());
+    int toplam = 0;
+    for(int i = 0; i <= x; i++)
+    {
+        toplam = toplam + i;
+    }
+    Console.WriteLine(toplam);
+    */
+    /*
+    // Gİrilen n adet sayıdan 100'den büyük olanları toplayan program;
+    Console.Write("Kaç Adet Sayı : ");
+    int n = int.Parse(Console.ReadLine());
+    int toplam = 0;
+    for(int i = 0; i < n; i++)
+    {
+        Console.Write((i + 1) + ". Sayı : ");
+        int sayi = int.Parse(Console.ReadLine());
+        if(sayi >= 100)
+        {
+            toplam = toplam + sayi;
+        }
+    }
+    Console.WriteLine(toplam);
+    */
+}
